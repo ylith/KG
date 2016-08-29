@@ -92,7 +92,8 @@ $(document).ready(function () {
                     return;
                 }
                 working = true;
-                simpleFloodFill(canvas, pixelX, pixelY, p, color, pixelSize, 4);
+                var methodType = $('#methodType').is(':checked') ? 8 : 4;
+                simpleFloodFill(canvas, pixelX, pixelY, p, color, pixelSize, methodType);
                 working = false;
             }
         }
