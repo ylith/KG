@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cohen-Sutherland line clipping alogrithm</title>
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="top-nav">
+        <label for="xmin">Xmin:</label><input id="xmin" type="number" value="100" min="0">
+        <label for="ymin">Ymin:</label><input id="ymin" type="number" value="100" min="0">
+        <label for="xmax">Xmax:</label><input id="xmax" type="number" value="200" min="0">
+        <label for="ymax">Ymax:</label><input id="ymax" type="number" value="200" min="0">
+        <input type="button" id="draw" value="Отсечи">
+        <input type="button" id="clearCanvas" value="Изчисти">
+        <label for="html5colorpicker">Избери цвят:</label><input type="color" id="html5colorpicker" value="#ff0000" style="width:50px;">
+    </div>
+    <canvas id="canvas" width="640" height="480" style="position:absolute; border: 1px solid; z-index: 98;"></canvas>
+    <canvas id="topCanvas" width="640" height="480" style="position:absolute; border: 1px solid; pointer-events: none; z-index: 98;"></canvas>
+    <div id="bottom-nav" style="position: absolute; bottom: 0">
+        <a href="bresenham.html">Изчертаване на права / окръжност  |  </a>
+        <a href="simpleFloodFill.html">Запълване на 4-свързана област  |  </a>
+        <a href="lineClipping.html" class="current">Отсичане на отсечка  |  </a>
+        <a href="bezier.html">Приближаване на точки с линии</a>
+    </div>
+    <script type="application/javascript" src="helpers.js"></script>
+    <script type="application/javascript" src="algorithms.js"></script>
+    <script type="application/javascript" src="lineClipping.js"></script>
+</body>
+</html>

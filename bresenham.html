@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <title>Bresenham's line algorithm</title>
+    <script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="top-nav">
+        <label for="pixelSize">Размер на пиксел:</label><input id="pixelSize" type="number" value="10" min="1">
+        <label for="cgMethod">Метод:</label>
+        <select id="cgMethod">
+            <option value="1">Метод на Брезенхам за отсечка</option>
+            <option value="2">Метод на закръгляне за отсечка</option>
+            <option value="3">Метод на закръгляне за окръжност</option>
+            <option value="4">Метод на Михенер за окръжност</option>
+        </select>
+        <input type="button" id="useMethod" value="Начертай">
+        <input type="button" id="clearCanvas" value="Изчисти">
+        <label for="html5colorpicker">Избери цвят:</label><input type="color" id="html5colorpicker" value="#ff0000">
+    </div>
+    <canvas id="canvas" width="640" height="480"></canvas>
+    <canvas id="topCanvas" width="640" height="480"></canvas>
+    <div id="bottom-nav">
+        <a href="bresenham.html" class="current">Изчертаване на права / окръжност  |  </a>
+        <a href="simpleFloodFill.html">Запълване на 4-свързана област  |  </a>
+        <a href="lineClipping.html">Отсичане на отсечка  |  </a>
+        <a href="bezier.html">Приближаване на точки с линии</a>
+    </div>
+    <script type="application/javascript" src="helpers.js"></script>
+    <script type="application/javascript" src="bresenham.js"></script>
+    <script type="application/javascript" src="algorithms.js"></script>
+</body>
+</html>

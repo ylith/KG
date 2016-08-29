@@ -1,0 +1,45 @@
+body {
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+#top-nav {
+    margin-bottom: 10px;
+}
+
+#bottom-nav {
+    position: absolute;
+    bottom: 0;
+}
+
+#html5colorpicker {
+    width: 50px;
+}
+
+.current {
+    color: green;
+    font-size: 22px;
+}
+
+#canvas {
+    position: absolute;
+    z-index: 98;
+    border: 1px solid #000;
+}
+
+#topCanvas {
+    position: absolute;
+    z-index: 99;
+    pointer-events: none;
+    border: 1px solid #000;
+}
+
+input, select {
+    padding: 10px;
+    border: solid 5px #c9c9c9;
+    transition: border 0.3s;
+}
+
+input:focus{
+    border: solid 5px #969696;
+}
