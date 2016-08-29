@@ -61,8 +61,8 @@ $( document ).ready(function() {
                 y1 = pixelY;
             }
             distance = getDistance(x1, y1, x2, y2);
-            ctx.font = "14px Arial";
-            ctx.fillStyle = "rgba(42, 124, 175, 1)";
+            ctx.font = "22px Arial";
+            ctx.fillStyle = "rgba(255, 0, 0, 1)";
             setPixel(canvas, pos.x, pos.y, ctx.fillStyle, 5);
             var text = "(" + pixelX / pixelSize + ", " + pixelY / pixelSize + ")";
             ctx.fillText(text, pos.x + 3, pos.y + 3);
