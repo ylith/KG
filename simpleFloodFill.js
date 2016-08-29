@@ -13,6 +13,7 @@ $(document).ready(function () {
         working = false,
         x1, y1, x2, y2,
         prevPoints = [],
+        delay = 100,
         pixelSize = 20;
 
     drawGrid(gridCanvas, pixelSize);
@@ -28,6 +29,9 @@ $(document).ready(function () {
         drawBoard(gridCanvas, pixelSize);
         prevPoints = [];
         closed = working = false;
+    });
+    $('#delay').bind('input', function () {
+        delay = parseInt($(this).val());
     });
 
     $('#clearCanvas').click(function () {
@@ -93,7 +97,7 @@ $(document).ready(function () {
                 }
                 working = true;
                 var methodType = $('#methodType').is(':checked') ? 8 : 4;
-                simpleFloodFill(canvas, pixelX, pixelY, p, color, pixelSize, methodType);
+                simpleFloodFill(canvas, pixelX, pixelY, p, color, pixelSize, methodType, delay);
                 working = false;
             }
         }
